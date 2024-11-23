@@ -1,0 +1,38 @@
+div {
+  width: 200px;
+  height: 200px;
+  animation: bounce 2s ease-in infinite 2s alternate both;
+  position: relative;
+  top: 0;
+  left: 0;
+  cursor: grab;
+  border-radius: 10px;
+  background-image: url("images/11.png");
+  background-size: cover;
+}
+div:hover {
+  animation-play-state: paused;
+}
+
+@keyframes bounce {
+  0% {
+    top: 0;
+    left: 400px;
+  }
+  25% {
+    top: 0;
+    left: 800px;
+  }
+  50% {
+    top: 400px;
+    left: 800px;
+  }
+  75% {
+    top: 400px;
+    left: 400px;
+  }
+  100% {
+    top: 800px;
+    left: 400px;
+  }
+}
