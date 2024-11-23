@@ -36,3 +36,9 @@ div:hover {
     left: 400px;
   }
 }
+input {
+  visibility: hidden;
+}
+input:checked + label {
+  display: none;
+}
