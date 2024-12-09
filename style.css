@@ -10,7 +10,7 @@ div {
   left: 0;
   animation-fill-mode: both;
   animation-direction: alternate;
-  background-image: url("images/mice.png");
+  background-image: url("mice.png");
   background-position: center;
   background-size: contain;
   cursor: grab;
