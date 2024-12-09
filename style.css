@@ -1,44 +1,72 @@
+body {
+  background-color: #030026;
+}
 div {
-  width: 200px;
-  height: 200px;
-  animation: bounce 2s ease-in infinite 2s alternate both;
+  width: 100px;
+  height: 100px;
+  animation: animation 5s infinite;
   position: relative;
   top: 0;
   left: 0;
+  animation-fill-mode: both;
+  animation-direction: alternate;
+  background-image: url("images/mice.png");
+  background-position: center;
+  background-size: contain;
   cursor: grab;
-  border-radius: 10px;
-  background-image: url("11.png");
-  background-size: cover;
+}
+div:nth-child(2) {
+  animation-delay: 1s;
+}
+div:nth-child(3) {
+  animation-delay: 2s;
 }
 div:hover {
   animation-play-state: paused;
 }
-
-@keyframes bounce {
+@keyframes animation {
   0% {
     top: 0;
-    left: 400px;
+    left: 200px;
   }
-  25% {
+  10% {
     top: 0;
-    left: 800px;
+    left: 600px;
+  }
+  20% {
+    top: 200px;
+    left: 600px;
+  }
+  30% {
+    top: 200px;
+    left: 300px;
+  }
+  40% {
+    top: 400px;
+    left: 300px;
   }
   50% {
     top: 400px;
+    left: 600px;
+  }
+  60% {
+    top: 400px;
     left: 800px;
   }
-  75% {
-    top: 400px;
-    left: 400px;
+  70% {
+    top: 200px;
+    left: 800px;
+  }
+  80% {
+    top: 200px;
+    left: 1000px;
+  }
+  90% {
+    top: 0px;
+    left: 1000px;
   }
   100% {
-    top: 800px;
-    left: 400px;
+    top: 0px;
+    left: 600px;
   }
-}
-input {
-  visibility: hidden;
-}
-input:checked + label {
-  display: none;
 }
