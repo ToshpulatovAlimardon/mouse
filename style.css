@@ -13,6 +13,7 @@ div {
   background-image: url("mice.png");
   background-position: center;
   background-size: contain;
+  background-repeat: no-repeat;
   cursor: grab;
 }
 div:nth-child(2) {
