@@ -1,73 +1,53 @@
 body {
-  background-color: #030026;
+  margin: 0;
+  background-color: #121212;
+  color: #ffffff;
+  overflow: hidden; 
 }
+
 div {
   width: 100px;
   height: 100px;
-  animation: animation 5s infinite;
+  background-image: url("mice.png");
+  background-size: contain;
+  background-repeat: no-repeat;
   position: relative;
   top: 0;
   left: 0;
-  animation-fill-mode: both;
-  animation-direction: alternate;
-  background-image: url("mice.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-  cursor: grab;
+  cursor: grabbing;
+  animation: mice 5s infinite alternate both;
+  filter: drop-shadow(0 0 10px #ffeb3b); /* Yengil sariq nurlanish */
 }
-div:nth-child(2) {
-  animation-delay: 1s;
-}
-div:nth-child(3) {
-  animation-delay: 2s;
-}
+
 div:hover {
   animation-play-state: paused;
 }
-@keyframes animation {
+
+div:active {
+  transform: scale(0.8) rotate(370deg);
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 0 20px #ff5722); /* Bosilganda qizg'ish nur */
+}
+
+@keyframes mice {
   0% {
     top: 0;
-    left: 200px;
+    left: 0;
   }
-  10% {
-    top: 0;
-    left: 600px;
-  }
-  20% {
+  25% {
     top: 200px;
-    left: 600px;
-  }
-  30% {
-    top: 200px;
-    left: 300px;
-  }
-  40% {
-    top: 400px;
-    left: 300px;
+    left: 400px;
   }
   50% {
     top: 400px;
-    left: 600px;
+    left: 0;
   }
-  60% {
-    top: 400px;
+  75% {
+    top: 600px;
     left: 800px;
-  }
-  70% {
-    top: 200px;
-    left: 800px;
-  }
-  80% {
-    top: 200px;
-    left: 1000px;
-  }
-  90% {
-    top: 0px;
-    left: 1000px;
   }
   100% {
-    top: 0px;
-    left: 600px;
+    top: 0;
+    left: 1200px;
   }
 }
